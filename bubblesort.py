@@ -26,14 +26,8 @@ def main() -> None:
     separated by a comma.
     """
     from sys import argv
-
-    listtosort = argv[1:]
-    for i in range(len(listtosort)):
-        try:
-            listtosort[i] = int(listtosort[i])
-        except ValueError:
-            print(f"ValueError: Check arguments")
-            exit()
+    from argvlist import argvlist
+    listtosort = argvlist(argv[1:])
     print(f"Unsorted:{listtosort}")
     print(f"Sorted:{bubblesort(listtosort)}")
     return None
