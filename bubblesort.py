@@ -27,9 +27,13 @@ def main() -> None:
     """
     from sys import argv
     from argvlist import argvlist
+    from time import time
+    starttime = time()
     listtosort = argvlist(argv[1:])
+    endtime = time()
     print(f"Unsorted:{listtosort}")
     print(f"Sorted:{bubblesort(listtosort)}")
+    print(f"Time elapsed:{endtime-starttime}")
     return None
 
 
