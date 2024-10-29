@@ -4,7 +4,7 @@
 def argvlist(listtoconvert) -> list:
     """
     Makes an attempt at turning the elements of a list into
-    integers. In case of ValueError, exit the program
+    integers. In case of ValueError, exit the program.
     """
     for i in range(len(listtoconvert)):
         try:
