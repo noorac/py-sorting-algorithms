@@ -13,8 +13,8 @@ def insertionsort(sortlist) -> list:
         # i is index to start at
         currentmin = sortlist[i]
         currentminindex = i
-        while currentminindex > 0 and currentmin < sortlist[currentminindex-1]:
-            sortlist[currentminindex] = sortlist[currentminindex-1]
+        while currentminindex > 0 and currentmin < sortlist[currentminindex - 1]:
+            sortlist[currentminindex] = sortlist[currentminindex - 1]
             currentminindex -= 1
         sortlist[currentminindex] = currentmin
     return sortlist
@@ -25,15 +25,24 @@ def main() -> None:
     Use main by giving a set of numbers after the filename
     separated by a comma.
     """
+    from decimal import Decimal, getcontext
     from sys import argv
-    from argvlist import argvlist
     from time import time
-    starttime = time()
+
+    from argvlist import argvlist
+
     listtosort = argvlist(argv[1:])
-    endtime = time()
+    if len(listtosort) == 0:
+        from testlist import test_list
+
+        # using test_list, def. 15 000
+        listtosort = test_list()
     print(f"Unsorted:{listtosort}")
+    starttime = time()
     print(f"Sorted:{insertionsort(listtosort)}")
-    print(f"Time elapsed:{endtime-starttime}")
+    endtime = time()
+    getcontext().prec = 3
+    print(f"Time elapsed:{Decimal(endtime)-Decimal(starttime)} seconds")
     return None
 
 
