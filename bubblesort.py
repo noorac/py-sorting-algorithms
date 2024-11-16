@@ -1,6 +1,8 @@
 # Bubble Sort
+from timer import timer
 
 
+@timer
 def bubblesort(sortlist) -> list:
     """
     Bubble sort:
@@ -25,9 +27,7 @@ def main() -> None:
     Use main by giving a set of numbers after the filename
     separated by a comma.
     """
-    from decimal import Decimal, getcontext
     from sys import argv
-    from time import time
 
     from argvlist import argvlist
 
@@ -38,11 +38,9 @@ def main() -> None:
         # using test_list, def. 15 000
         listtosort = test_list()
     print(f"Unsorted:{listtosort}")
-    starttime = time()
-    print(f"Sorted:{bubblesort(listtosort)}")
-    endtime = time()
-    getcontext().prec = 3
-    print(f"Time elapsed:{Decimal(endtime)-Decimal(starttime)} seconds")
+    sortedlist, elapsedtime = bubblesort(listtosort)
+    print(f"Sorted:{sortedlist}")
+    print(f"Time elapsed: {elapsedtime} seconds")
     return None
 
 
