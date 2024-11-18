@@ -29,14 +29,17 @@ def main() -> None:
     """
     from sys import argv
 
-    from argvlist import argvlist
+    from testlist import test_list
 
-    listtosort = argvlist(argv[1:])
-    if len(listtosort) == 0:
-        from testlist import test_list
-
-        # using test_list, def. 15 000
-        listtosort = test_list()
+    try:
+        # listlength = int(argvlist(argv[1]))
+        listlength = int(argv[1])
+    except IndexError:
+        listlength = 15000
+    except ValueError:
+        listlength = 15000
+    # using test_list, def. 15 000
+    listtosort = test_list(listlength)
     print(f"Unsorted:{listtosort}")
     sortedlist, elapsedtime = bubblesort(listtosort)
     print(f"Sorted:{sortedlist}")
