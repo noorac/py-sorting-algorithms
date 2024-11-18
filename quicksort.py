@@ -1,4 +1,4 @@
-# Bubble Sort
+# Quicksort
 from timer import timer
 
 
@@ -21,7 +21,7 @@ def swapindex(sortlist, i, j):
 @timer
 def quicksort(sortlist, low=None, high=None) -> list:
     """
-    Bubble sort:
+    Quicksort:
     Works by chosing a pivot, then divide and conquer from there.
     Time complexity: O(n^2)
     """
