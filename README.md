@@ -34,9 +34,11 @@ Welcome to the **Sorting Algorithms Collection**, a repository showcasing variou
 ### Clone the Repository
 ```bash
 git clone https://github.com/yourusername/sorting-algorithms.git
-
+```
+```bash
 cd py-sorting-algorithms
-
+```
+```bash
 python bubblesort.py <length of test list as integer>
 ```
 
