@@ -6,9 +6,6 @@ from timer import timer
 def insertionsort(sortlist) -> list:
     """
     Insertion sort:
-    Works by iterating the list, "picking up" the next number, working
-    backwards inserting the next number when it is no longer smaller
-    than the number it checks.
     Time complexity: O(n^2)
     """
     for i in range(len(sortlist)):
