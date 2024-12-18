@@ -8,7 +8,7 @@ def selectionsort(sortlist) -> list:
     Selection sort:
     Works by iterating the list, remembering what is the lowest number, puttin
     it at the front of the list, then starting again at index 2.
-    Time complexity: O(n^2)
+    Time complexity: All cases: O(n^2)
     """
     for i in range(len(sortlist)):
         # i is index to start at
