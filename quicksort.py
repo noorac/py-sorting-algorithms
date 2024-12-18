@@ -22,8 +22,11 @@ def swapindex(sortlist, i, j):
 def quicksort(sortlist, low=None, high=None) -> list:
     """
     Quicksort:
-    Works by chosing a pivot, then divide and conquer from there.
-    Time complexity: O(n^2)
+    Works by chosing a pivot and dividing into subarrays, then recursively sort the subarrays.
+    Time complexity: 
+    Best: O(n*log n)
+    Worst: O(n^2)
+    Average: O(n*log n)
     """
     if low is None:
         low = 0
