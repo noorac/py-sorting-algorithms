@@ -6,6 +6,9 @@ from timer import timer
 def shellsort(sortlist) -> list:
     """
     Shell sort:
+    Shellsort sorts by comparing elements at a specific gap and reducing the gap over time. 
+    Starting with a large gap, it sorts elements at that distance apart, then reduces the gap
+    and repeats, finishing with a standard insertion sort at gap = 1.
     Time complexity: 
     Best: O(n*log(n))
     Average: O(n*log(n))
