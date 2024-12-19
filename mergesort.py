@@ -5,8 +5,10 @@ from timer import timer
 @timer
 def mergesort(sortlist) -> list:
     """
-    Mergesort:
-    Time complexity: O(n*log(n))
+    Mergesort: Mergesort divides the array into halves, recursively sorts them,
+    and merges the sorted halves into a single sorted array.
+    Time complexity: 
+    Best: All cases O(n*log(n))
     """
     if len(sortlist) < 2:
         return sortlist
