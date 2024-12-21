@@ -5,8 +5,9 @@ from timer import timer
 @timer
 def insertionsort(sortlist) -> list:
     """
-    Insertion sort:
-    Time complexity: O(n^2)
+    Insertion sort: Insertion Sort builds a sorted portion of the array by repeatedly picking
+    the next element and inserting it into its correct position within the sorted part.
+    Time complexity: All cases O(n^2) (except already sorted, which is O(n))
     """
     for i in range(len(sortlist)):
         # i is index to start at
