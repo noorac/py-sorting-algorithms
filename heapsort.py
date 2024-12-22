@@ -18,8 +18,10 @@ def heapify(sortlist, listlength, i):
 @timer
 def heapsort(sortlist) -> list:
     """
-    Heapsort:
-    Time complexity: O(n*log(n))
+    Heapsort: Heapsort builds a max heap from the array, then repeatedly swaps the
+    root (largest) with the last element, reduces the heap size, and re-heaps the
+    remaining elements.
+    Time complexity: All cases O(n*log(n))
     """
     sortlist.insert(0,"test")
     listlength = len(sortlist)
