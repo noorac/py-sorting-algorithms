@@ -6,10 +6,12 @@ from timer import timer
 @timer
 def bucketsort(sortlist) -> list:
     """
-    Bucket sort:
+    Bucket sort: Bucketsort divides elements into buckets, sorts each bucket
+    (e.g., with insertion sort), and concatenates them. It works best with
+    uniform data distribution.
     Time complexity:
     Best: O(n+k)
-    Average: O(n)
+    Average: O(n + k)
     Worst: O(n^2)
     """
     retlist = []
