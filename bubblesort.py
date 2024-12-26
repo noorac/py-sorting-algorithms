@@ -6,9 +6,10 @@ from timer import timer
 def bubblesort(sortlist) -> list:
     """
     Bubble sort:
-    Works by swapping a list item with the following item if it if bigger
-    than the next item.
-    Time complexity: O(n^2)
+    Bubble Sort repeatedly steps through the array, compares adjacent elements,
+    and swaps them if they are out of order. This process continues until the
+    array is sorted.
+    Time complexity: All cases O(n^2) (except if it is already sorted O(n))
     """
     for i in range(len(sortlist)):
         s = False
